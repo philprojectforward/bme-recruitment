@@ -112,3 +112,28 @@
 - No HTML changes needed — filename unchanged, new file dropped into `dist/images/`
 - Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
 - Verified live via curl: HTTP 200, Content-Length 201808 at https://bme-recruitment.web.app/images/construction-steel.jpg
+
+### July 17, 2026 — Rename "BME Recruitment Ltd" to "BME Recruitment Group"
+**By:** Coder agent (via Hermes delegate_task)
+- **Renamed** the business name from "BME Recruitment Ltd" to "BME Recruitment Group" in all three HTML files: `index.html`, `privacy.html`, and `404.html`
+- Updated 21 instances total across all files:
+  - **index.html** (9): meta author, og:site_name, og:image:alt, twitter:image:alt, JSON-LD `"name"` field, nav logo aria-label, nav logo img alt, footer logo img alt, footer copyright
+  - **privacy.html** (8): page title, meta description, nav logo aria-label, nav logo img alt, privacy policy body text, business name list item, footer logo img alt, footer copyright
+  - **404.html** (4): page title, nav logo aria-label, nav logo img alt, footer copyright
+- **Did NOT change** LinkedIn company page URLs (`linkedin.com/company/bme-recruitment-ltd`) — those are external links to the live LinkedIn page; the slug is controlled by LinkedIn
+- **Did NOT change** the domain name (bme-recruitment.com), JSON-LD `@type`, or any other schema field
+- Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
+- Verified: `curl -s https://bme-recruitment.web.app/ | grep -i "Ltd"` returns nothing (excluding LinkedIn URL check); `curl -s https://bme-recruitment.web.app/ | grep -i "Group"` returns results
+
+### July 17, 2026 — Replace ALL remaining "BME Recruitment" with "BME Recruitment Group"
+**By:** Coder agent (via Hermes delegate_task)
+- **Completed** the rebrand by replacing every remaining instance of "BME Recruitment" (without "Group") with "BME Recruitment Group" across all three HTML files: `index.html`, `privacy.html`, and `404.html`
+- Total replacements: 13
+  - **index.html** (9): `<title>`, og:title, twitter:title, About section heading, About body text (×2 — "was founded" and "proudly supports"), candidate section lead text, CV iframe title, "Why Choose" section heading
+  - **privacy.html** (3): three possessive instances "BME Recruitment's CRM system/CRM partner/candidate CRM" → "BME Recruitment Group's ..."
+  - **404.html** (1): meta description "Return to the BME Recruitment homepage" → "Return to the BME Recruitment Group homepage"
+- **Did NOT change** URLs (bme-recruitment.com, bme-recruitment.web.app, linkedin.com/company/bme-recruitment-ltd, register.bmerecruitment.com, candidate.kisrec.com) — all preserved as-is
+- **No "Group Group" duplicates** introduced (negative lookahead regex ensured "BME Recruitment Group" instances were skipped)
+- Possessive forms handled correctly: "BME Recruitment's" → "BME Recruitment Group's"
+- Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
+- Verified: zero instances of "BME Recruitment" without "Group" remain; `grep -c "BME Recruitment Group"` returns 18 (index.html) + 11 (privacy.html) + 5 (404.html) = 34 total
