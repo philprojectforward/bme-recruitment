@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "projectforward-web"
+  },
+  "targets": {
+    "projectforward-web": {
+      "hosting": {
+        "bme-recruitment": [
+          "bme-recruitment"
+        ]
+      }
+    }
+  }
+}

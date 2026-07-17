@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bme-recruitment.com/sitemap.xml
