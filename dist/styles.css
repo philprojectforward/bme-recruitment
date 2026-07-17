@@ -762,6 +762,8 @@ a {
 .cv-iframe-wrapper iframe {
   display: block;
   border: none;
+  width: 100%;
+  min-height: 600px;
 }
 
 .cv-helper {
