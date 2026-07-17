@@ -46,7 +46,7 @@
         type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/logo.jpg">
     <link rel="preload" as="image" href="images/logo.jpg">
-    <link rel="stylesheet" href="styles.css?v=1">
+    <link rel="stylesheet" href="styles.css?v=2">
 
     <script type="application/ld+json">
     {
@@ -410,42 +410,24 @@
                                 Work with respected M&E contractors
                             </li>
                         </ul>
-                        <a href="#cv-upload" class="btn-accent btn-lg">Upload Your CV</a>
                     </div>
-                    <div class="split-section__visual split-section__visual--candidates" aria-hidden="true">
-                        <div class="visual-pattern visual-pattern--orange">
-                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="200" height="200" fill="#fffbeb"/>
-                                <circle cx="100" cy="100" r="70" fill="#f59e0b" opacity="0.1"/>
-                                <circle cx="50" cy="150" r="30" fill="#f59e0b" opacity="0.15"/>
-                                <path d="M60 60 L100 100 L60 140" stroke="#f59e0b" stroke-width="4" fill="none" opacity="0.2"/>
-                            </svg>
+                    <div class="split-section__visual">
+                        <div class="cv-box">
+                            <h3 class="cv-box__title">Upload Your CV</h3>
+                            <p class="cv-box__text">Click the button below to upload your CV and register with BME Recruitment. Your details go straight into our system and we'll contact you about relevant opportunities.</p>
+                            <div class="cv-iframe-wrapper">
+                                <iframe id="iframe" frameborder="0"
+                                    src="https://register.bmerecruitment.com/cvloader/b9XdfcBqjm76VMm8GKKv/kfvdbIqPiVg0I3RAGIiLMyvrAth2"
+                                    style="width:100%;min-height:420px;" title="BME Recruitment CV upload form">
+                                </iframe>
+                            </div>
+                            <p class="cv-helper">
+                                Prefer to speak to us first? Call <a href="tel:01137336301">0113 733 6301</a> or email
+                                <a href="mailto:matthew@bme-recruitment.com">matthew@bme-recruitment.com</a>.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- CV Upload Section -->
-        <section class="section section--muted cv-section reveal" id="cv-upload">
-            <div class="container">
-                <div class="section__header section__header--center">
-                    <span class="section__eyebrow section__eyebrow--accent">Candidate Registration</span>
-                    <h2 class="section__title">Upload Your CV</h2>
-                    <p class="section__lead">Click the button below to upload your CV and register with BME
-                        Recruitment. Your details go straight into our system and we'll contact you about relevant
-                        opportunities.</p>
-                </div>
-                <div class="cv-iframe-wrapper">
-                    <iframe id="iframe" frameborder="0"
-                        src="https://register.bmerecruitment.com/cvloader/b9XdfcBqjm76VMm8GKKv/kfvdbIqPiVg0I3RAGIiLMyvrAth2"
-                        style="width:100%;min-height:600px;" title="BME Recruitment CV upload form">
-                    </iframe>
-                </div>
-                <p class="cv-helper">
-                    Prefer to speak to us first? Call <a href="tel:01137336301">0113 733 6301</a> or email
-                    <a href="mailto:matthew@bme-recruitment.com">matthew@bme-recruitment.com</a>.
-                </p>
             </div>
         </section>
 
@@ -683,7 +665,7 @@
         </div>
     </footer>
 
-    <script src="scripts.js?v=1"></script>
+    <script src="scripts.js?v=2"></script>
 </body>
 
 </html>

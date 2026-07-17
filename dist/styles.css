@@ -722,6 +722,32 @@ a {
   color: var(--success);
 }
 
+
+/* CV box within split section */
+.cv-box {
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.cv-box__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-xs);
+  color: var(--accent-dark);
+}
+
+.cv-box__text {
+  color: var(--muted-foreground);
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.cv-box .cv-iframe-wrapper {
+  margin-bottom: var(--space-xs);
+}
 /* CV Section */
 .cv-iframe-wrapper {
   max-width: 800px;
