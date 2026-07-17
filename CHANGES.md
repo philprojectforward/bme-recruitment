@@ -165,3 +165,14 @@
 - Bumped CSS cache-buster from ?v=15 to ?v=16
 - Responsive layout preserved: logo + text on one side, 2×2 image grid on the other (stacks on mobile)
 - Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
+
+### July 17, 2026 — PPE grid: added 2 more images, 2x2 → 2x3
+**By:** Coder agent (via Hermes delegate_task)
+- **Added** 2 new PPE product images to the `#ppe` teaser grid (now 6 images total):
+  - `ppe-product-5.jpg` (8,113 bytes) — alt "PPE safety gear"
+  - `ppe-product-6.jpg` (4,111 bytes) — alt "PPE workwear products"
+- **Grid changed** from 2×2 (4 items) to 2×3 (6 items): `grid-template-columns: repeat(2, 120px)` naturally creates 3 rows with 6 items; added `max-height: 480px` guard on `.ppe-gallery` to keep the visual column from growing too tall
+- **Mobile responsive (≤480px):** switched from 2 columns × 110px to 3 columns × 90px so the 6 images fit compactly in 2 rows on small screens; `max-width: 300px` keeps it tidy
+- Bumped CSS cache-buster from ?v=16 to ?v=17
+- Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
+- Verified all 6 images live

@@ -1125,6 +1125,7 @@ a {
   grid-template-columns: repeat(2, 120px);
   gap: 0.75rem;
   width: max-content;
+  max-height: 480px;
 }
 
 .ppe-gallery__img {
@@ -1146,12 +1147,14 @@ a {
 
 @media (max-width: 480px) {
   .ppe-gallery {
-    grid-template-columns: repeat(2, 110px);
+    grid-template-columns: repeat(3, 90px);
     gap: 0.5rem;
+    width: 100%;
+    max-width: 300px;
   }
   .ppe-gallery__img {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
   .ppe-teaser__logo {
     max-width: 180px;
