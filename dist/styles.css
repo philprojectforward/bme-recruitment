@@ -1010,6 +1010,114 @@ a {
   color: #ef4444;
 }
 
+
+/* PPE Teaser section */
+.ppe-teaser {
+  position: relative;
+  padding: var(--space-lg) 0;
+  background: #0a2a2e;
+  color: #e8f4f4;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .ppe-teaser {
+    padding: var(--space-xl) 0;
+  }
+}
+
+.ppe-teaser__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(13, 115, 119, 0.35) 0%, transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+    linear-gradient(135deg, #0a2a2e 0%, #0d3b40 100%);
+  pointer-events: none;
+}
+
+.ppe-teaser__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 12px,
+    rgba(255, 255, 255, 0.02) 12px,
+    rgba(255, 255, 255, 0.02) 13px
+  );
+  pointer-events: none;
+}
+
+.ppe-teaser__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .ppe-teaser__inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+}
+
+.ppe-teaser__content {
+  flex: 1 1 auto;
+  max-width: 620px;
+}
+
+.ppe-teaser__visual {
+  flex: 0 0 220px;
+  width: 220px;
+  height: 220px;
+}
+
+.ppe-teaser__visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ppe-teaser__badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0.35rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+  box-shadow: var(--shadow-accent);
+}
+
+.ppe-teaser__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0 0 0.5rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.ppe-teaser__subheading {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.ppe-teaser__body,
+.ppe-teaser__desc {
+  color: #b8d4d6;
+  margin: 0 0 0.75rem;
+  line-height: 1.7;
+}
+
 /* Footer */
 .footer {
   background: var(--foreground);
