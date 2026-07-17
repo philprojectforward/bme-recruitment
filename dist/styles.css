@@ -752,11 +752,11 @@ a {
 .cv-iframe-wrapper {
   max-width: 800px;
   margin: 0 auto;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 
 .cv-iframe-wrapper iframe {
