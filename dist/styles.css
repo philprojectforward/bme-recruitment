@@ -1067,39 +1067,18 @@ a {
 .ppe-teaser {
   position: relative;
   padding: var(--space-lg) 0;
-  background: #0a2a2e;
-  color: #e8f4f4;
+  background: #ffffff;
+  color: var(--foreground, #0f172a);
   overflow: hidden;
+  border-top: 3px solid #c08020;
+  border-bottom: 3px solid #c08020;
+  box-shadow: 0 0 0 1px rgba(192, 128, 32, 0.15) inset;
 }
 
 @media (min-width: 1024px) {
   .ppe-teaser {
     padding: var(--space-xl) 0;
   }
-}
-
-.ppe-teaser__bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(13, 115, 119, 0.35) 0%, transparent 55%),
-    radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
-    linear-gradient(135deg, #0a2a2e 0%, #0d3b40 100%);
-  pointer-events: none;
-}
-
-.ppe-teaser__bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 12px,
-    rgba(255, 255, 255, 0.02) 12px,
-    rgba(255, 255, 255, 0.02) 13px
-  );
-  pointer-events: none;
 }
 
 .ppe-teaser__inner {
@@ -1124,6 +1103,16 @@ a {
   max-width: 620px;
 }
 
+.ppe-teaser__logo {
+  display: block;
+  max-width: 220px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 0 var(--space-sm);
+}
+
 .ppe-teaser__visual {
   flex: 0 0 auto;
   width: 100%;
@@ -1143,9 +1132,9 @@ a {
   height: 120px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-  background: #0d3b40;
+  border: 2px solid rgba(192, 128, 32, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f8f5ef;
 }
 
 @media (min-width: 768px) {
@@ -1164,12 +1153,15 @@ a {
     width: 110px;
     height: 110px;
   }
+  .ppe-teaser__logo {
+    max-width: 180px;
+  }
 }
 
 .ppe-teaser__badge {
   display: inline-block;
-  background: var(--accent);
-  color: var(--accent-foreground);
+  background: #c08020;
+  color: #ffffff;
   padding: 0.35rem 1.1rem;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
@@ -1177,26 +1169,26 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
-  box-shadow: var(--shadow-accent);
+  box-shadow: 0 2px 6px rgba(192, 128, 32, 0.3);
 }
 
 .ppe-teaser__title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   margin: 0 0 0.5rem;
-  color: #ffffff;
+  color: var(--foreground, #0f172a);
   line-height: 1.2;
 }
 
 .ppe-teaser__subheading {
   font-size: 1.15rem;
-  color: var(--accent);
+  color: #c08020;
   margin: 0 0 0.75rem;
   font-weight: 600;
 }
 
 .ppe-teaser__body,
 .ppe-teaser__desc {
-  color: #b8d4d6;
+  color: #334155;
   margin: 0 0 0.75rem;
   line-height: 1.7;
 }

@@ -137,3 +137,31 @@
 - Possessive forms handled correctly: "BME Recruitment's" → "BME Recruitment Group's"
 - Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
 - Verified: zero instances of "BME Recruitment" without "Group" remain; `grep -c "BME Recruitment Group"` returns 18 (index.html) + 11 (privacy.html) + 5 (404.html) = 34 total
+
+### July 17, 2026 — Redesign PPE teaser section (dark → white with PPE logo)
+**By:** Coder agent (via Hermes delegate_task)
+- **Client request:** Change PPE section from dark teal background to white, matching the PPE brand logo styling
+- **HTML changes (`dist/index.html`):**
+  - Removed the `.ppe-teaser__bg` decorative div (dark radial gradients + diagonal stripe pattern)
+  - Added the PPE business logo as an inline `<img>` (`images/ppe-logo.jpg`, 220×120, gold/amber on white) at the top of the content column
+  - Replaced the 4 product images:
+    - `ppe-hivis.jpg` → `ppe-product-1.jpg` (alt "PPE hi-vis workwear")
+    - `ppe-multi.jpg` → `ppe-product-2.jpg` (alt "PPE workwear range")
+    - `ppe-products.jpg` → `ppe-product-3.jpg` (alt "PPE safety equipment")
+    - `ppe-products2.jpg` → `ppe-product-4.jpg` (alt "PPE safety products")
+  - Kept all text content unchanged ("More Than Just Recruitment", "PPE & Workwear Solutions — Coming Soon", body/desc paragraphs)
+- **CSS changes (`dist/styles.css`):**
+  - Section background: `#0a2a2e` (dark teal) → `#ffffff` (white)
+  - Section text color: `#e8f4f4` → `var(--foreground, #0f172a)` (dark)
+  - Title color: `#ffffff` → `var(--foreground, #0f172a)`
+  - Body/desc text: `#b8d4d6` → `#334155` (slate-700, readable on white)
+  - Removed `.ppe-teaser__bg` and `.ppe-teaser__bg::after` rules entirely (no more dark gradient/diagonal pattern)
+  - Added `.ppe-teaser__logo` rule: max 220×120, object-fit contain, margin below
+  - "Coming Soon" badge: orange `var(--accent)` → gold/amber `#c08020` with white text and gold-tinted shadow
+  - Subheading: `var(--accent)` (orange) → `#c08020` (gold)
+  - Gallery images: dark border `rgba(255,255,255,0.15)` → gold-tinted border `rgba(192,128,32,0.25)`; shadow softened; background `#0d3b40` → `#f8f5ef` (warm off-white)
+  - Added subtle gold accent: 3px top/bottom border in `#c08020` + inset box-shadow `rgba(192,128,32,0.15)` to keep the section visually distinct from neighbours while staying light
+  - Mobile: logo scales to 180px max-width on ≤480px
+- Bumped CSS cache-buster from ?v=15 to ?v=16
+- Responsive layout preserved: logo + text on one side, 2×2 image grid on the other (stacks on mobile)
+- Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
