@@ -617,14 +617,25 @@ a {
   }
 }
 
-/* Compact 2-column card grids on mobile to reduce scroll length */
+/* Compact 2-column card grids on mobile to reduce scroll length.
+   Flexbox + centering so an odd/leftover card centres instead of
+   leaving an awkward gap on the last row. */
 @media (max-width: 767px) {
   .cards-grid--3 {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-sm);
   }
-  .cards-grid--3 .card {
+  .cards-grid--3 > .card {
+    flex: 1 1 calc((100% - var(--space-sm)) / 2);
+    max-width: calc((100% - var(--space-sm)) / 2);
     padding: var(--space-sm);
+  }
+  /* A leftover final card (alone on the last row) spans full width */
+  .cards-grid--3 > .card:last-child:nth-child(odd) {
+    flex-basis: 100%;
+    max-width: 100%;
   }
   .value-card__icon,
   .trade-card__icon,
