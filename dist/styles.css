@@ -471,15 +471,15 @@ a {
   position: relative;
   padding: var(--space-lg) 0;
   overflow: hidden;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background:
+    linear-gradient(rgba(13, 115, 119, 0.85), rgba(10, 42, 46, 0.9)),
+    url('images/construction-hero.jpg') center/cover no-repeat;
+  color: #ffffff;
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(13, 115, 119, 0.06), transparent 35%),
-    radial-gradient(circle at 20% 80%, rgba(245, 158, 11, 0.04), transparent 35%);
   z-index: 0;
 }
 
@@ -495,8 +495,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(13, 115, 119, 0.08);
-  color: var(--primary);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
   font-size: 0.875rem;
@@ -520,7 +520,7 @@ a {
 
 .hero__subtitle {
   font-size: 1.125rem;
-  color: var(--muted-foreground);
+  color: rgba(255, 255, 255, 0.9);
   max-width: 680px;
   margin: 0 auto var(--space-md);
 }
@@ -551,12 +551,13 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--muted-foreground);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.9rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .trust-item svg {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 /* Cards */
@@ -1073,14 +1074,45 @@ a {
 }
 
 .ppe-teaser__visual {
-  flex: 0 0 220px;
-  width: 220px;
-  height: 220px;
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.ppe-teaser__visual svg {
-  width: 100%;
-  height: 100%;
+.ppe-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 0.75rem;
+  width: max-content;
+}
+
+.ppe-gallery__img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: #0d3b40;
+}
+
+@media (min-width: 768px) {
+  .ppe-teaser__visual {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .ppe-gallery {
+    grid-template-columns: repeat(2, 110px);
+    gap: 0.5rem;
+  }
+  .ppe-gallery__img {
+    width: 110px;
+    height: 110px;
+  }
 }
 
 .ppe-teaser__badge {
@@ -1116,6 +1148,49 @@ a {
   color: #b8d4d6;
   margin: 0 0 0.75rem;
   line-height: 1.7;
+}
+
+/* Construction image section backgrounds */
+.about {
+  position: relative;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    url('images/construction-team.jpg') center/cover no-repeat;
+  z-index: -1;
+}
+
+.sectors {
+  position: relative;
+}
+
+.sectors::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
+    url('images/construction-electrical.jpg') center/cover no-repeat;
+  z-index: -1;
+}
+
+.clients {
+  position: relative;
+}
+
+.clients::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(232, 244, 244, 0.92), rgba(232, 244, 244, 0.92)),
+    url('images/construction-steel.jpg') center/cover no-repeat;
+  z-index: -1;
 }
 
 /* Footer */
