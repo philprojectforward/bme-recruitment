@@ -1171,8 +1171,31 @@ a {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-decoration: none;
   margin-bottom: var(--space-sm);
   box-shadow: 0 2px 6px rgba(192, 128, 32, 0.3);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.ppe-teaser__badge:hover {
+  transform: translateY(-2px);
+  background: #a06818;
+  box-shadow: 0 4px 10px rgba(192, 128, 32, 0.4);
+  color: #ffffff;
+}
+
+.ppe-teaser__cta {
+  margin-top: 0.25rem;
+}
+
+.ppe-teaser__desc a {
+  color: #0d7377;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.ppe-teaser__desc a:hover {
+  color: #0a5d61;
 }
 
 .ppe-teaser__title {
