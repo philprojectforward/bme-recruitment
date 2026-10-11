@@ -176,3 +176,9 @@
 - Bumped CSS cache-buster from ?v=16 to ?v=17
 - Deployed to Firebase Hosting (`firebase deploy --only hosting --project projectforward-web`)
 - Verified all 6 images live
+
+### October 11, 2026 — Privacy wording for the phone number and text assistant
+**By:** Claude (Project Forward)
+- privacy.html: new section 6, "Calls and Texts to Our Phone Numbers" (calls run by Project Forward on Twilio, missed-call texts, the AI text assistant on Claude by Anthropic, instant callback on enquiries, 12-month records); later sections renumbered; date updated
+- index.html: "We may ring or text you about your enquiry." under the client enquiry form
+- Goes live with BME's text assistant, not before
